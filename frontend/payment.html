@@ -1,0 +1,38 @@
+<!-- Payment page -->
+ <!-- frontend/payment.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment - REVA Food Court</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script defer src="scripts/payment.js"></script>
+</head>
+<body class="bg-green-50 text-gray-800">
+  <header class="bg-green-600 text-white p-6 text-center">
+    <h1 class="text-3xl font-bold">💳 Make Payment</h1>
+    <p class="text-lg">Secure your food in one tap!</p>
+    <a href="index.html" class="underline text-sm">← Back to Home</a>
+  </header>
+
+  <main class="p-8 max-w-xl mx-auto">
+    <form id="paymentForm" class="bg-white p-6 rounded-lg shadow space-y-4">
+      <label for="orderId" class="block font-medium">Order ID:</label>
+      <input type="text" id="orderId" placeholder="Enter your Order ID" class="w-full p-2 border rounded" required />
+
+      <button type="submit" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">
+        Pay Now
+      </button>
+    </form>
+
+    <div id="confirmation" class="hidden mt-6 p-4 bg-green-100 text-green-800 rounded-lg text-center font-semibold">
+      ✅ Payment successful!
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center p-4 mt-10">
+    &copy; 2025 REVA Food Court. All rights reserved.
+  </footer>
+</body>
+</html>

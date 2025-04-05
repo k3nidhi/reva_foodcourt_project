@@ -1,0 +1,40 @@
+<!-- Cart page -->
+ <!-- frontend/cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart - REVA Food Court</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script defer src="scripts/cart.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-yellow-500 text-white p-6 text-center">
+    <h1 class="text-3xl font-bold">🛒 Your Cart</h1>
+    <p class="text-lg">Ready to munch? Let’s go!</p>
+    <a href="index.html" class="underline text-sm">← Back to Home</a>
+  </header>
+
+  <main class="p-8 max-w-4xl mx-auto">
+    <div id="cartItems" class="space-y-4">
+      <!-- JS will populate cart items here -->
+    </div>
+
+    <div class="mt-6 text-right">
+      <p class="text-xl font-semibold">Total: ₹<span id="totalAmount">0</span></p>
+      <button id="placeOrderBtn" class="mt-4 bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600">
+        Place Order
+      </button>
+    </div>
+
+    <div id="orderSuccess" class="hidden mt-6 p-4 bg-green-100 text-green-800 rounded-lg">
+      ✅ Order placed successfully! Your Order ID is <span id="orderId"></span>.
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center p-4 mt-10">
+    &copy; 2025 REVA Food Court. All rights reserved.
+  </footer>
+</body>
+</html>
